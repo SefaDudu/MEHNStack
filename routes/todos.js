@@ -4,7 +4,7 @@ const Todo = require("../model/Todo")
 router.get("/",async (req,res)=>{
         const todos =await Todo.find({}).lean();//lean hata vermemesi için 
         res.render('index',{
-            title:"Todo List",
+            title:"Adres Listesi",
             isIndex:true,
             todos
         })
@@ -36,11 +36,36 @@ router.post("/Create", async (req,res)=>{
 });
 
 
-router.post("/completed", async (req,res)=>{
-    const  getTodo = await Todo.findById(req.body.id);
-    getTodo.completed=true;
-    await getTodo.save();
-   res.redirect('/');
+router.get("/Detail/:id", async (req,res)=>{
+   
+    const  getAdress = await Todo.findById(req.params.id).lean();;
+   
+    res.render('Detail',{
+        getAdress
+    })
+   
+});
+
+router.post("/Detail/:id", async (req,res)=>{
+   try {
+    const  getAdress = await Todo.findById(req.params.id);
+    getAdress.id=req.params.id;
+        getAdress.Adress= req.body.Adress;
+        getAdress.City= req.body.City;
+        getAdress.Country=req.body.Country;
+    
+    const updated = await Todo.updateOne(getAdress);
+    res.redirect('/');
+   } catch (error) {
+       console.log(error)
+   }
+    
+   
+});
+router.get("/Delete/:id", async (req,res)=>{
+    const  getAdress = await Todo.findById(req.params.id);
+     await Todo.deleteOne(getAdress);
+    res.redirect('/');
    
 });
 module.exports=router;

@@ -4,7 +4,7 @@ const Adress = new Schema({
     Adress: {
 
         type:String,
-        required : true
+        required : false
     },
     Country: {
 

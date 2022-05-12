@@ -1,0 +1,27 @@
+ <div class="row">
+           
+    <form class="col s12" action="/Detail/{{getAdress._id}}" method="post">
+      
+       
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="Adres" type="text" class="validate" name="Adress"  value="{{getAdress.Adress}}">
+          <label for="Adres">Adres</label>
+        </div>
+      </div>
+      
+         <div class="row">
+        <div class="input-field col s12">
+          <input id="Country" type="text" class="validate" name="Country" value="{{getAdress.Country}}">
+          <label for="Country">Ülke</label>
+        </div>
+      </div>
+         <div class="row">
+        <div class="input-field col s12">
+          <input id="City" type="text" class="validate" name="City" value="{{getAdress.City}}">
+          <label for="City">Şehir</label>
+        </div>
+      </div>
+      <input type="submit" name="" id="" value="gönder">
+    </form>
+  </div>

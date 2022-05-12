@@ -1,1 +1,30 @@
-hello
+ <form action="/Detail" method="get" >
+<table class="striped">
+        <thead>
+          <tr>
+              <th>Adres</th>
+              <th>Ülke</th>
+              <th>Şehir</th>
+              <th></th>
+              
+          </tr>
+        </thead>
+
+        <tbody>
+             {{#each todos}}
+        <tr>
+            <td>{{Adress}}</td>
+            <td>{{Country}}</td>
+            <td>{{City}}</td>
+            <td> 
+                <a href="/Detail/{{_id}}">Detay</a>
+                <a href="/Delete/{{_id}}">Sil</a>
+            
+            </td>
+          </tr>
+    {{/each}}
+         
+        </tbody>
+      </table>
+      </form>
+
