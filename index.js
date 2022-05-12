@@ -30,7 +30,7 @@ app.listen(process.env.PORT || PORT,()=>{
 })
 
 } catch (error) {
-    console.log(error)
+     console.log(error)
 }
 
 }
