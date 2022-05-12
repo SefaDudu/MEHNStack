@@ -58,7 +58,8 @@ router.post("/Detail/:id", async (req,res)=>{
     res.redirect('/');
    } catch (error) {
        console.log(error) 
-   }
+   } 
+
     
    
 });
