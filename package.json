@@ -1,0 +1,29 @@
+{
+  "name": "MEHNStack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.5",
+    "mongoose": "^6.3.3",
+    "nodemon": "^2.0.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SefaDudu/MEHNStack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SefaDudu/MEHNStack/issues"
+  },
+  "homepage": "https://github.com/SefaDudu/MEHNStack#readme"
+}
