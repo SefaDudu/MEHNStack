@@ -3,7 +3,8 @@ const mongoose=require("mongoose");
 const app = express();
 const PORT = 3000;
 const uri = "mongodb+srv://sefadudu:dudusefa@cluster0.a6tyc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
+const exhbs=require("express-handlebars");
+const todoRoutes = require("./routes/todos");
 const hbs = exhbs.create({
 
     defaultLayout:'main',
