@@ -12,18 +12,23 @@ router.get("/",async (req,res)=>{
 });
 
 
-router.get("/create",(req,res)=>{
+router.get("/Create",(req,res)=>{
 
-    res.render('create',{
-        title:"Create List",
+    res.render('Create',{
+        Adress:"Create List",
+        Country:"Create List",
+        City:"Create List",
         isCreate:true
     })
 });
 
-router.post("/create", async (req,res)=>{
+router.post("/Create", async (req,res)=>{
      const todo = new Todo({ 
-         title:req.body.title,
-         completed:false
+        Adress:req.body.Adress,
+        Country:req.body.Country,
+        City:req.body.City,
+        title:req.body.title,
+        
      });
     await todo.save();
     res.redirect('/');
