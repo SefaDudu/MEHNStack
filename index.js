@@ -25,7 +25,7 @@ try {
     })
 
     
-app.listen(PORT,()=>{
+app.listen(process.env.PORT || PORT,()=>{
     console.log("Server Running")
 })
 
