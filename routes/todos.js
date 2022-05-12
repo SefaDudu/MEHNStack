@@ -57,7 +57,7 @@ router.post("/Detail/:id", async (req,res)=>{
     const updated = await Todo.updateOne(getAdress);
     res.redirect('/');
    } catch (error) {
-       console.log(error)
+       console.log(error) 
    }
     
    
