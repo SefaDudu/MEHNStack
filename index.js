@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose=require("mongoose");
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 const uri = "mongodb+srv://sefadudu:dudusefa@cluster0.a6tyc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const exhbs=require("express-handlebars");
 const todoRoutes = require("./routes/todos");
